@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌸 芭比粉 · 极繁千禧博客</title>
+  <!-- 引入像素字体 (Press Start 2P) 和 中文像素字体 (ZCOOL KuaiLe) 作为补充 -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== 全局重置 & 像素字体 ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fce4ec;
+      /* 大量增加背景装饰：星星、圆点、心形、波浪、斜纹、光晕等 */
+      background-image:
+        /* 闪烁小星星群 */
+        radial-gradient(circle at 5% 10%, #ffb6d9 3px, transparent 3px),
+        radial-gradient(circle at 15% 25%, #ff8dcb 4px, transparent 4px),
+        radial-gradient(circle at 25% 5%, #ff69b4 2px, transparent 2px),
+        radial-gradient(circle at 35% 40%, #ffb6d9 5px, transparent 5px),
+        radial-gradient(circle at 45% 15%, #ff8dcb 3px, transparent 3px),
+        radial-gradient(circle at 55% 60%, #ff69b4 4px, transparent 4px),
+        radial-gradient(circle at 65% 20%, #ffb6d9 2px, transparent 2px),
+        radial-gradient(circle at 75% 55%, #ff8dcb 5px, transparent 5px),
+        radial-gradient(circle at 85% 10%, #ff69b4 3px, transparent 3px),
+        radial-gradient(circle at 92% 45%, #ffb6d9 4px, transparent 4px),
+        radial-gradient(circle at 8% 70%, #ff8dcb 3px, transparent 3px),
+        radial-gradient(circle at 20% 85%, #ff69b4 5px, transparent 5px),
+        radial-gradient(circle at 40% 75%, #ffb6d9 2px, transparent 2px),
+        radial-gradient(circle at 60% 90%, #ff8dcb 4px, transparent 4px),
+        radial-gradient(circle at 78% 80%, #ff69b4 3px, transparent 3px),
+        radial-gradient(circle at 95% 88%, #ffb6d9 5px, transparent 5px),
+        /* 心形装饰 (用圆点模拟) */
+        radial-gradient(circle at 12% 50%, #ff4d8f 6px, transparent 6px),
+        radial-gradient(circle at 88% 35%, #ff4d8f 8px, transparent 8px),
+        radial-gradient(circle at 50% 95%, #ff4d8f 5px, transparent 5px),
+        /* 大光晕 */
+        radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.15) 0px, rgba(255, 105, 180, 0.15) 120px, transparent 120px),
+        radial-gradient(circle at 80% 70%, rgba(255, 20, 100, 0.10) 0px, rgba(255, 20, 100, 0.10) 150px, transparent 150px),
+        radial-gradient(circle at 50% 50%, rgba(255, 182, 217, 0.08) 0px, rgba(255, 182, 217, 0.08) 200px, transparent 200px),
+        /* 斜纹线条 (更密) */
+        repeating-linear-gradient(45deg, rgba(255, 105, 180, 0.06) 0px, rgba(255, 105, 180, 0.06) 6px, transparent 6px, transparent 12px),
+        repeating-linear-gradient(-45deg, rgba(255, 20, 100, 0.04) 0px, rgba(255, 20, 100, 0.04) 8px, transparent 8px, transparent 16px),
+        /* 波浪点阵 */
+        repeating-linear-gradient(0deg, rgba(255, 182, 217, 0.10) 0px, rgba(255, 182, 217, 0.10) 2px, transparent 2px, transparent 20px),
+        repeating-linear-gradient(90deg, rgba(255, 141, 203, 0.08) 0px, rgba(255, 141, 203, 0.08) 2px, transparent 2px, transparent 24px),
+        /* 底部粉底 */
+        #fce4ec;
+      background-size:
+        100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+        100% 100%, 100% 100%, 100% 100%,
+        100% 100%, 100% 100%, 100% 100%,
+        32px 32px, 32px 32px,
+        20px 20px, 24px 24px,
+        100% 100%;
+      min-height: 100vh;
+      padding: 2rem 1.5rem;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', 'Comic Sans MS', cursive, sans-serif;
+      color: #4a0e2b;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 14px;
+      position: relative;
+    }
+
+    /* 额外浮动装饰 (纯CSS) ———— 更多星星、蝴蝶结、心形 */
+    body::before {
+      content: "🌸 ✨ 💖 🌟 ✨ 🎀 💕 ✨ 🌸 💖 ✨ 🎀 💕 ✨ 🌟 ✨ 💖 🌸 ✨ 🎀 ✨ 💕";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      font-size: 1.8rem;
+      letter-spacing: 40px;
+      color: rgba(255, 105, 180, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+      padding: 20px;
+      z-index: 0;
+      transform: rotate(-3deg);
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle at 10% 90%, rgba(255, 182, 217, 0.08) 0px, transparent 80px),
+        radial-gradient(circle at 90% 10%, rgba(255, 141, 203, 0.08) 0px, transparent 100px),
+        radial-gradient(circle at 45% 45%, rgba(255, 105, 180, 0.05) 0px, transparent 150px);
+      z-index: 0;
+    }
+
+    .blog-container {
+      max-width: 1300px;
+      width: 100%;
+      background: #ffe4f0;
+      background-image:
+        repeating-linear-gradient(0deg, #ffc0d9 0px, #ffc0d9 2px, transparent 2px, transparent 12px),
+        repeating-linear-gradient(90deg, #ffb3d1 0px, #ffb3d1 2px, transparent 2px, transparent 12px),
+        radial-gradient(circle at 30% 40%, rgba(255, 182, 217, 0.2) 0px, transparent 100px),
+        radial-gradient(circle at 70% 60%, rgba(255, 141, 203, 0.15) 0px, transparent 120px);
+      padding: 2rem;
+      border: 8px double #ff3b7f;
+      border-radius: 80px 20px 80px 20px;
+      box-shadow:
+        0 0 0 6px #ff8ec4,
+        0 0 0 12px #ffb0d0,
+        0 0 0 18px #ffd1e5,
+        12px 12px 0 6px rgba(255, 20, 100, 0.2),
+        inset 0 0 30px #ff99cc;
+      position: relative;
+      transition: all 0.2s;
+      z-index: 1;
+    }
+
+    .blog-container::before {
+      content: "✨🌸✨🌸✨🌸✨🌸✨";
+      position: absolute;
+      top: -30px;
+      left: 20px;
+      font-size: 1.8rem;
+      letter-spacing: 12px;
+      color: #ff2a7f;
+      text-shadow: 0 0 8px #ffa5d0, 0 0 20px #ff69b4;
+      background: #ffe4f0;
+      padding: 0 20px;
+      border-radius: 60px;
+      white-space: nowrap;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .blog-container::after {
+      content: "🎀  ﾟ･*:.｡. .｡.:*･ﾟ  🎀";
+      position: absolute;
+      bottom: -25px;
+      right: 30px;
+      font-size: 2rem;
+      color: #f5006b;
+      background: #fff0f8;
+      padding: 0 24px;
+      border-radius: 100px;
+      box-shadow: 0 0 0 4px #ff5b9e;
+      text-shadow: 2px 2px 0 #ffb3d9;
+      letter-spacing: 6px;
+      transform: rotate(-2deg);
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    /* ===== 头部 ===== */
+    .blog-header {
+      text-align: center;
+      padding: 1.8rem 1rem 1rem;
+      background: rgba(255, 240, 248, 0.7);
+      backdrop-filter: blur(4px);
+      border: 4px dotted #ff5a9b;
+      border-radius: 100px 30px 100px 30px;
+      margin-bottom: 2.8rem;
+      position: relative;
+      box-shadow: inset 0 -6px 0 #ff8eb5, 0 10px 20px #ffb0d0;
+    }
+
+    .blog-header h1 {
+      font-size: 3.8rem;
+      font-weight: 900;
+      letter-spacing: 6px;
+      background: linear-gradient(135deg, #ff1a6b, #ff7eb3, #ffb0d0, #ff4d8f);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow:
+        6px 6px 0 #ffd1e5,
+        10px 10px 20px #ff3b7f,
+        0 0 40px #ff99cc;
+      animation: shimmer 3s ease-in-out infinite alternate;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      transform: rotate(-1deg);
+      line-height: 1.4;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .blog-header p {
+      font-size: 1.6rem;
+      color: #ad1d5c;
+      background: #ffd9ea;
+      display: inline-block;
+      padding: 0.3rem 2.8rem;
+      border-radius: 60px;
+      border: 3px solid #ff3b7f;
+      box-shadow: 4px 4px 0 #ff88b0;
+      margin-top: 8px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      backdrop-filter: blur(2px);
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    /* ===== 个人简介 ===== */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background: rgba(255, 240, 248, 0.7);
+      backdrop-filter: blur(4px);
+      border: 6px double #ff3b7f;
+      border-radius: 80px 20px 80px 20px;
+      padding: 1.8rem 2.5rem;
+      margin-bottom: 2.8rem;
+      box-shadow: inset 0 -6px 0 #ff8eb5, 0 10px 20px #ffb0d0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .profile-avatar {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      border: 6px solid #ff3b7f;
+      box-shadow: 0 0 0 4px #ff99cc, 8px 8px 0 rgba(255, 20, 100, 0.2);
+      overflow: hidden;
+      background: #ffd9ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .profile-avatar:hover {
+      transform: scale(1.02);
+      border-color: #ff0066;
+    }
+
+    .profile-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-avatar .avatar-placeholder {
+      font-size: 3.5rem;
+      color: #b3004b;
+      opacity: 0.6;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      user-select: none;
+    }
+
+    .profile-avatar .avatar-upload-hint {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 20, 100, 0.7);
+      color: #fff;
+      font-size: 0.55rem;
+      text-align: center;
+      padding: 4px 0;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      opacity: 0;
+      transition: 0.2s;
+      pointer-events: none;
+      backdrop-filter: blur(2px);
+    }
+
+    .profile-avatar:hover .avatar-upload-hint {
+      opacity: 1;
+    }
+
+    .profile-avatar input[type="file"] {
+      display: none;
+    }
+
+    .profile-info {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .profile-info .profile-name {
+      font-size: 2.2rem;
+      color: #b3004b;
+      text-shadow: 3px 3px 0 #ffb0d0;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      letter-spacing: 4px;
+      margin-bottom: 0.6rem;
+    }
+
+    .profile-info .profile-bio {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #3d1027;
+      background: rgba(255, 240, 248, 0.5);
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px 8px 40px 8px;
+      border-left: 8px solid #ff3b7f;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      backdrop-filter: blur(2px);
+    }
+
+    /* ===== 导航栏 ===== */
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem 1.2rem;
+      background: #ffc1d6;
+      padding: 1rem 2rem;
+      border-radius: 80px 20px 80px 20px;
+      margin-bottom: 3rem;
+      border: 4px solid #ff3b7f;
+      box-shadow: inset 0 -4px 0 #ff6fa3, 0 8px 0 #b84a74;
+      background-image: repeating-linear-gradient(45deg, #ffb0d0 0px, #ffb0d0 8px, #ffd0e4 8px, #ffd0e4 16px);
+    }
+
+    .nav-bar .nav-btn {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #3f0f26;
+      background: #fff0f8;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      border: 3px solid #d63a7a;
+      box-shadow: 3px 3px 0 #ff7aad, 6px 6px 0 rgba(255, 20, 100, 0.2);
+      cursor: pointer;
+      transition: 0.15s ease;
+      transform: rotate(0.5deg);
+      letter-spacing: 2px;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      background: #fff0f8;
+    }
+
+    .nav-bar .nav-btn:hover {
+      background: #ff3b7f;
+      color: #fff0f8;
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 0 0 4px #ff99cc, 6px 6px 0 #b8004b;
+    }
+
+    .nav-bar .nav-btn.active {
+      background: #ff3b7f;
+      color: #fff0f8;
+      box-shadow: 0 0 0 4px #ff99cc, 6px 6px 0 #b8004b;
+    }
+
+    /* ===== 页面内容容器 ===== */
+    .page-content {
+      display: block;
+      min-height: 300px;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .page-panel {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .page-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== 主页卡片 ===== */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fff5fa;
+      background-image:
+        radial-gradient(circle at 10% 20%, #ffd9e8 5px, transparent 5px),
+        radial-gradient(circle at 90% 80%, #ffb0d0 8px, transparent 8px);
+      border: 6px double #ff3b7f;
+      border-radius: 60px 12px 60px 12px;
+      padding: 1.8rem 1.2rem;
+      box-shadow:
+        0 12px 0 #b34b72,
+        0 20px 30px rgba(255, 20, 100, 0.3),
+        inset 0 -8px 0 #ff99cc,
+        inset 0 8px 20px #ffc0d9;
+      transform: rotate(0.5deg);
+      transition: 0.25s;
+      backdrop-filter: blur(2px);
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.02) rotate(-0.5deg);
+      box-shadow: 0 12px 0 #b34b72, 0 30px 40px #ff4d8f;
+      border-color: #ff0066;
+    }
+
+    .card::before {
+      content: "✦  ✧  ★  ✧  ✦";
+      position: absolute;
+      top: -16px;
+      right: 10px;
+      background: #ffd9ea;
+      padding: 0 18px;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      letter-spacing: 8px;
+      color: #d6337a;
+      border: 3px solid #ff3b7f;
+      box-shadow: 0 4px 0 #b34b72;
+      white-space: nowrap;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      color: #b3004b;
+      text-shadow: 3px 3px 0 #ffb0d0, 6px 6px 0 rgba(255, 20, 100, 0.15);
+      border-bottom: 6px dotted #ff6699;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.8rem;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      letter-spacing: 2px;
+      display: inline-block;
+      background: #ffd9ea;
+      padding: 0.1rem 1.8rem 0.1rem 0.8rem;
+      border-radius: 0 60px 60px 0;
+    }
+
+    .card .meta {
+      font-size: 0.7rem;
+      background: #ffb3d1;
+      color: #3f0f26;
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      border: 2px solid #d63a7a;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 2px 2px 0 #ff7aad;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      background: rgba(255, 240, 248, 0.5);
+      padding: 0.8rem;
+      border-radius: 30px 8px 30px 8px;
+      border-left: 8px solid #ff3b7f;
+      margin: 0.8rem 0;
+      color: #3d1027;
+      font-weight: 500;
+      backdrop-filter: blur(2px);
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .card .tag {
+      display: inline-block;
+      background: #ff3b7f;
+      color: #fff0f8;
+      padding: 0.2rem 1.2rem;
+      border-radius: 60px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      margin-right: 0.4rem;
+      margin-top: 0.5rem;
+      border: 3px solid #ff99cc;
+      box-shadow: 0 4px 0 #9e0040;
+      letter-spacing: 1px;
+      transform: rotate(-1deg);
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .card .tag:nth-child(2) { background: #ff80b0; color: #1f0714; }
+    .card .tag:nth-child(3) { background: #ffb0d0; color: #3f0f26; }
+
+    /* ===== 相册 ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1 / 1;
+      background: #ffd9ea;
+      border: 4px double #ff3b7f;
+      border-radius: 30px 8px 30px 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #b3004b;
+      cursor: pointer;
+      transition: 0.2s;
+      position: relative;
+      box-shadow: 4px 4px 0 #ff7aad;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      border-color: #ff0066;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-item .gallery-placeholder {
+      font-size: 2.5rem;
+      opacity: 0.5;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .gallery-upload-area {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-upload-area input[type="file"] {
+      display: none;
+    }
+
+    .gallery-upload-label {
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      font-size: 0.8rem;
+      padding: 0.6rem 1.5rem;
+      background: #ff3b7f;
+      color: #fff0f8;
+      border: 3px solid #ff99cc;
+      border-radius: 60px;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #9e0040;
+      transition: 0.1s;
+      letter-spacing: 2px;
+    }
+
+    .gallery-upload-label:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #9e0040;
+    }
+
+    .gallery-upload-label:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #9e0040;
+    }
+
+    .gallery-empty {
+      text-align: center;
+      color: #ad1d5c;
+      font-size: 0.9rem;
+      padding: 2rem;
+      opacity: 0.6;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    /* ===== 歌单 ===== */
+    .playlist-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255, 240, 248, 0.5);
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px 8px 40px 8px;
+      border-left: 8px solid #ff3b7f;
+      margin-bottom: 0.8rem;
+      box-shadow: 2px 2px 0 #ff7aad;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      flex-wrap: wrap;
+    }
+
+    .playlist-item .song-num {
+      font-size: 0.7rem;
+      color: #b3004b;
+      min-width: 30px;
+    }
+
+    .playlist-item .song-name {
+      flex: 1;
+      font-size: 0.85rem;
+      color: #3d1027;
+      min-width: 120px;
+    }
+
+    .playlist-item .song-artist {
+      font-size: 0.65rem;
+      color: #ad1d5c;
+      opacity: 0.8;
+    }
+
+    .playlist-item .song-delete {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #ff3b7f;
+      opacity: 0.5;
+      transition: 0.2s;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .playlist-item .song-delete:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .playlist-add-form {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .playlist-add-form input {
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+      border: 3px solid #ff3b7f;
+      border-radius: 40px;
+      background: #fff5fa;
+      color: #3d1027;
+      outline: none;
+      flex: 1;
+      min-width: 120px;
+    }
+
+    .playlist-add-form input:focus {
+      border-color: #ff0066;
+      box-shadow: 0 0 0 4px #ffb0d0;
+    }
+
+    .playlist-add-form button {
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      font-size: 0.75rem;
+      padding: 0.5rem 1.5rem;
+      background: #ff3b7f;
+      color: #fff0f8;
+      border: 3px solid #ff99cc;
+      border-radius: 60px;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #9e0040;
+      transition: 0.1s;
+    }
+
+    .playlist-add-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #9e0040;
+    }
+
+    .playlist-add-form button:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #9e0040;
+    }
+
+    .playlist-empty {
+      text-align: center;
+      color: #ad1d5c;
+      font-size: 0.9rem;
+      padding: 1.5rem;
+      opacity: 0.6;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    /* ===== 日记 ===== */
+    .diary-item {
+      background: rgba(255, 240, 248, 0.5);
+      padding: 1rem 1.5rem;
+      border-radius: 40px 8px 40px 8px;
+      border-left: 8px solid #ff3b7f;
+      margin-bottom: 1rem;
+      box-shadow: 2px 2px 0 #ff7aad;
+    }
+
+    .diary-item .diary-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      border-bottom: 3px dotted #ff6699;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .diary-item .diary-title {
+      font-size: 1rem;
+      color: #b3004b;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .diary-item .diary-date {
+      font-size: 0.55rem;
+      color: #ad1d5c;
+      opacity: 0.7;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .diary-item .diary-body {
+      font-size: 0.8rem;
+      line-height: 1.8;
+      color: #3d1027;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .diary-item .diary-delete {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #ff3b7f;
+      opacity: 0.5;
+      transition: 0.2s;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .diary-item .diary-delete:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .diary-add-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .diary-add-form input,
+    .diary-add-form textarea {
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      font-size: 0.75rem;
+      padding: 0.6rem 1rem;
+      border: 3px solid #ff3b7f;
+      border-radius: 30px;
+      background: #fff5fa;
+      color: #3d1027;
+      outline: none;
+    }
+
+    .diary-add-form input:focus,
+    .diary-add-form textarea:focus {
+      border-color: #ff0066;
+      box-shadow: 0 0 0 4px #ffb0d0;
+    }
+
+    .diary-add-form textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    .diary-add-form button {
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      font-size: 0.8rem;
+      padding: 0.5rem 1.5rem;
+      background: #ff3b7f;
+      color: #fff0f8;
+      border: 3px solid #ff99cc;
+      border-radius: 60px;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #9e0040;
+      transition: 0.1s;
+      align-self: flex-start;
+    }
+
+    .diary-add-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #9e0040;
+    }
+
+    .diary-add-form button:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #9e0040;
+    }
+
+    .diary-empty {
+      text-align: center;
+      color: #ad1d5c;
+      font-size: 0.9rem;
+      padding: 1.5rem;
+      opacity: 0.6;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    /* ===== 关于 ===== */
+    .about-content {
+      background: rgba(255, 240, 248, 0.5);
+      padding: 2rem;
+      border-radius: 60px 12px 60px 12px;
+      border-left: 8px solid #ff3b7f;
+      box-shadow: 2px 2px 0 #ff7aad;
+    }
+
+    .about-content p {
+      font-size: 0.85rem;
+      line-height: 2;
+      color: #3d1027;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      margin-bottom: 1rem;
+    }
+
+    .about-content .about-emoji-line {
+      font-size: 1.8rem;
+      text-align: center;
+      letter-spacing: 8px;
+      margin: 1rem 0;
+    }
+
+    /* ===== 侧边装饰 ===== */
+    .sidebar-stickers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem 2rem;
+      background: #ffc8dd;
+      padding: 1.5rem 1rem;
+      border-radius: 100px 20px 100px 20px;
+      border: 6px dotted #ff3b7f;
+      margin: 2rem 0 1.5rem;
+      background-image: radial-gradient(circle at 0% 0%, #ffb0d0 4px, transparent 4px);
+      background-size: 30px 30px;
+      box-shadow: inset 0 -8px 0 #ff6fa3;
+    }
+
+    .sidebar-stickers span {
+      font-size: 1.6rem;
+      background: #fff0f8;
+      padding: 0.2rem 2rem;
+      border-radius: 80px;
+      border: 4px solid #d63a7a;
+      box-shadow: 5px 5px 0 #ff7aad;
+      transform: rotate(2deg);
+      letter-spacing: 6px;
+      font-weight: bold;
+      color: #9e0040;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .sidebar-stickers span:nth-child(2) { transform: rotate(-3deg); background: #ffd9ea; }
+    .sidebar-stickers span:nth-child(3) { transform: rotate(5deg); background: #ffb3d1; }
+
+    /* ===== 留言板 ===== */
+    .guestbook-section {
+      margin: 3rem 0 2rem;
+      padding: 1.8rem 1.5rem;
+      background: rgba(255, 240, 248, 0.7);
+      backdrop-filter: blur(4px);
+      border: 6px double #ff3b7f;
+      border-radius: 60px 12px 60px 12px;
+      box-shadow: inset 0 -6px 0 #ff8eb5, 0 10px 20px #ffb0d0;
+    }
+
+    .guestbook-section h2 {
+      font-size: 2.2rem;
+      color: #b3004b;
+      text-shadow: 3px 3px 0 #ffb0d0;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      letter-spacing: 4px;
+    }
+
+    .guestbook-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .guestbook-form input,
+    .guestbook-form textarea {
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      font-size: 0.85rem;
+      padding: 0.8rem 1.2rem;
+      border: 4px solid #ff3b7f;
+      border-radius: 40px;
+      background: #fff5fa;
+      color: #3d1027;
+      box-shadow: inset 0 2px 8px rgba(255, 20, 100, 0.1);
+      outline: none;
+      transition: 0.2s;
+    }
+
+    .guestbook-form input:focus,
+    .guestbook-form textarea:focus {
+      border-color: #ff0066;
+      box-shadow: 0 0 0 4px #ffb0d0;
+    }
+
+    .guestbook-form textarea {
+      min-height: 80px;
+      resize: vertical;
+      border-radius: 30px;
+    }
+
+    .guestbook-form button {
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      font-size: 1.2rem;
+      padding: 0.8rem 2rem;
+      background: #ff3b7f;
+      color: #fff0f8;
+      border: 4px solid #ff99cc;
+      border-radius: 60px;
+      box-shadow: 0 6px 0 #9e0040;
+      cursor: pointer;
+      transition: 0.1s ease;
+      letter-spacing: 2px;
+      align-self: center;
+    }
+
+    .guestbook-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 0 #9e0040;
+      background: #ff1a6b;
+    }
+
+    .guestbook-form button:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #9e0040;
+    }
+
+    .guestbook-messages {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 0.5rem;
+    }
+
+    .guestbook-messages::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .guestbook-messages::-webkit-scrollbar-track {
+      background: #ffd9ea;
+      border-radius: 20px;
+    }
+
+    .guestbook-messages::-webkit-scrollbar-thumb {
+      background: #ff3b7f;
+      border-radius: 20px;
+      border: 2px solid #ff99cc;
+    }
+
+    .message-item {
+      background: #fff5fa;
+      border: 4px solid #ffb0d0;
+      border-radius: 40px 12px 40px 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: 4px 4px 0 #ff7aad;
+      position: relative;
+    }
+
+    .message-item .msg-user {
+      font-size: 0.8rem;
+      color: #b3004b;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 3px dotted #ff6699;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .message-item .msg-user span {
+      font-size: 0.6rem;
+      color: #ad1d5c;
+      opacity: 0.7;
+    }
+
+    .message-item .msg-content {
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: #3d1027;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      word-break: break-word;
+    }
+
+    .message-item .msg-delete {
+      position: absolute;
+      top: 6px;
+      right: 12px;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #ff3b7f;
+      opacity: 0.5;
+      transition: 0.2s;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .message-item .msg-delete:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .empty-msg {
+      text-align: center;
+      color: #ad1d5c;
+      font-size: 0.9rem;
+      padding: 1.5rem;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      opacity: 0.6;
+    }
+
+    /* ===== 页脚 ===== */
+    .blog-footer {
+      text-align: center;
+      padding: 1.8rem 0.5rem;
+      margin-top: 2.5rem;
+      border-top: 8px double #ff3b7f;
+      border-bottom: 8px double #ff3b7f;
+      background: rgba(255, 230, 240, 0.6);
+      backdrop-filter: blur(3px);
+      border-radius: 80px 12px 80px 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #70003a;
+      text-shadow: 2px 2px 0 #ffb0d0;
+      letter-spacing: 3px;
+      box-shadow: inset 0 0 30px #ff99cc;
+      position: relative;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .blog-footer::before {
+      content: "💖  ﾟ･*:.｡. .｡.:*･ﾟ  💖";
+      font-size: 1.8rem;
+      margin-right: 12px;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .blog-footer::after {
+      content: "🎀  ｡.｡.:*･ﾟﾟ･*:.｡.｡  🎀";
+      font-size: 1.8rem;
+      margin-left: 12px;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    .blog-footer .footer-tag {
+      background: #ffd9ea;
+      padding: 0.1rem 2rem;
+      border-radius: 60px;
+      border: 3px solid #ff3b7f;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 680px) {
+      .blog-container { padding: 1.2rem; }
+      .blog-header h1 { font-size: 2.6rem; letter-spacing: 3px; }
+      .nav-bar .nav-btn { font-size: 0.9rem; padding: 0.3rem 1rem; }
+      .card h2 { font-size: 1.4rem; }
+      .card p { font-size: 0.7rem; }
+      .guestbook-section h2 { font-size: 1.6rem; }
+      .sidebar-stickers span { font-size: 1.2rem; padding: 0.2rem 1rem; }
+      .profile-section { padding: 1.2rem; gap: 1rem; }
+      .profile-avatar { width: 90px; height: 90px; }
+      .profile-info .profile-name { font-size: 1.6rem; }
+      .profile-info .profile-bio { font-size: 0.75rem; }
+      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+    }
+
+    /* ===== 浮动装饰 (保留原有) ===== */
+    .glitter {
+      position: fixed;
+      pointer-events: none;
+      font-size: 2rem;
+      opacity: 0.25;
+      z-index: 0;
+      animation: floatGlitter 12s infinite alternate ease-in-out;
+      font-family: 'Press Start 2P', 'ZCOOL KuaiLe', cursive;
+    }
+
+    @keyframes floatGlitter {
+      0% { transform: translateY(0px) rotate(0deg) scale(0.9); opacity: 0.15; }
+      100% { transform: translateY(-40px) rotate(20deg) scale(1.4); opacity: 0.45; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 浮动装饰 (更多) -->
+  <div class="glitter" style="top: 5%; left: 3%;">🌸</div>
+  <div class="glitter" style="top: 12%; left: 92%; animation-duration: 18s;">✨</div>
+  <div class="glitter" style="top: 35%; left: 97%; animation-duration: 14s; font-size: 3rem;">💗</div>
+  <div class="glitter" style="top: 80%; left: 2%; animation-duration: 20s;">🌟</div>
+  <div class="glitter" style="top: 10%; left: 45%; animation-duration: 16s;">🎀</div>
+  <div class="glitter" style="top: 55%; left: 5%; animation-duration: 22s;">💖</div>
+  <div class="glitter" style="top: 70%; left: 88%; animation-duration: 15s;">🌸</div>
+  <div class="glitter" style="top: 25%; left: 75%; animation-duration: 19s;">✨</div>
+  <div class="glitter" style="top: 90%; left: 50%; animation-duration: 17s; font-size: 2.5rem;">💕</div>
+  <div class="glitter" style="top: 45%; left: 50%; animation-duration: 21s; font-size: 3.5rem;">🎀</div>
+
+  <div class="blog-container">
+    <!-- ===== 头部 ===== -->
+    <header class="blog-header">
+      <h1>🌸 欢yin莱叨偶De博克~ 🌸</h1>
+      <p>✨ 幻瑃主唱小婪の电子花园 ✨</p>
+    </header>
+
+    <!-- ===== 个人简介 ===== -->
+    <section class="profile-section">
+      <div class="profile-avatar" id="avatarContainer" title="点击更换头像">
+        <span class="avatar-placeholder" id="avatarPlaceholder">🌸</span>
+        <img id="avatarImage" style="display: none;" alt="头像" />
+        <div class="avatar-upload-hint">📷 更换头像</div>
+        <input type="file" id="avatarInput" accept="image/*" />
+      </div>
+      <div class="profile-info">
+        <div class="profile-name">🌸 婪望盷</div>
+        <div class="profile-bio">这里是幻瑃主唱小婪！！我喜欢你们所有祝我和蝰蛇99的人和幻瑃乐迷们！！</div>
+      </div>
+    </section>
+
+    <!-- ===== 导航栏 ===== -->
+    <nav class="nav-bar">
+      <button class="nav-btn active" data-page="home">🏠 主页</button>
+      <button class="nav-btn" data-page="gallery">📸 相册</button>
+      <button class="nav-btn" data-page="diary">💌 日记</button>
+      <button class="nav-btn" data-page="playlist">🎧 歌单</button>
+      <button class="nav-btn" data-page="about">🌸 关于</button>
+    </nav>
+
+    <!-- ===== 页面内容 ===== -->
+    <div class="page-content">
+
+      <!-- ====== 主页 ====== -->
+      <div class="page-panel active" id="page-home">
+        <div class="blog-grid">
+          <article class="card">
+            <h2>💖 千禧复古潮</h2>
+            <div class="meta">📅 2026.07.01 · 🕒 芭比时间</div>
+            <p>蝴蝶结、荧光粉、低腰裤、迷你包…… 2026 年千禧风回潮！极繁主义就是我的态度，越粉越辣，越闪越爱！</p>
+            <div>
+              <span class="tag">#Y2K</span>
+              <span class="tag">#芭比粉</span>
+              <span class="tag">#复古未来</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>🎀 今日OOTD</h2>
+            <div class="meta">👗 粉色系 · 叠穿法则</div>
+            <p>粉色吊带 + 网眼罩衫 + 亮片迷你裙，配上厚底松糕鞋，再来一个蝴蝶结发饰，回头率200%！💋</p>
+            <div>
+              <span class="tag">#穿搭</span>
+              <span class="tag">#芭比风格</span>
+              <span class="tag">#极繁</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>📀 千禧歌单</h2>
+            <div class="meta">🎧 复古舞曲 · 循环中</div>
+            <p>Britney、Christina、Spice Girls …… 还有 2000 年的 J-Pop 和 K-Pop，混搭才是最千禧！💿</p>
+            <div>
+              <span class="tag">#歌单</span>
+              <span class="tag">#复古舞曲</span>
+              <span class="tag">#千禧年</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>🌸 ありがとう</h2>
+            <div class="meta">🎨 心からの感謝</div>
+            <p>ありがとう。</p>
+            <div>
+              <span class="tag">#感謝</span>
+              <span class="tag">#ありがとう</span>
+              <span class="tag">#心</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ====== 相册 ====== -->
+      <div class="page-panel" id="page-gallery">
+        <h2 style="font-size:1.8rem; color:#b3004b; text-shadow:3px 3px 0 #ffb0d0; font-family:'Press Start 2P','ZCOOL KuaiLe',cursive; margin-bottom:1rem; text-align:center;">📸 相 册</h2>
+        <div class="gallery-upload-area">
+          <label class="gallery-upload-label" for="galleryInput">📷 上传图片</label>
+          <input type="file" id="galleryInput" accept="image/*" multiple />
+          <button class="gallery-upload-label" id="clearGalleryBtn" style="background:#b34b72;">🗑️ 清空</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-empty">✨ 还没有照片，快来上传吧～ ✨</div>
+        </div>
+      </div>
+
+      <!-- ====== 日记 ====== -->
+      <div class="page-panel" id="page-diary">
+        <h2 style="font-size:1.8rem; color:#b3004b; text-shadow:3px 3px 0 #ffb0d0; font-family:'Press Start 2P','ZCOOL KuaiLe',cursive; margin-bottom:1rem; text-align:center;">💌 日 记</h2>
+        <div class="diary-add-form">
+          <input type="text" id="diaryTitleInput" placeholder="📝 标题" maxlength="30" />
+          <textarea id="diaryBodyInput" placeholder="✏️ 写点什么……" maxlength="500"></textarea>
+          <button id="addDiaryBtn">🌸 发布日记</button>
+        </div>
+        <div id="diaryList">
+          <div class="diary-empty">✨ 还没有日记，记录你的心情吧～ ✨</div>
+        </div>
+      </div>
+
+      <!-- ====== 歌单 ====== -->
+      <div class="page-panel" id="page-playlist">
+        <h2 style="font-size:1.8rem; color:#b3004b; text-shadow:3px 3px 0 #ffb0d0; font-family:'Press Start 2P','ZCOOL KuaiLe',cursive; margin-bottom:1rem; text-align:center;">🎧 歌 单</h2>
+        <div class="playlist-add-form">
+          <input type="text" id="songNameInput" placeholder="🎵 歌名" maxlength="40" />
+          <input type="text" id="songArtistInput" placeholder="🎤 歌手" maxlength="30" />
+          <button id="addSongBtn">➕ 添加歌曲</button>
+        </div>
+        <div id="playlistContainer">
+          <div class="playlist-empty">✨ 歌单还是空的，快来添加吧～ ✨</div>
+        </div>
+      </div>
+
+      <!-- ====== 关于 ====== -->
+      <div class="page-panel" id="page-about">
+        <h2 style="font-size:1.8rem; color:#b3004b; text-shadow:3px 3px 0 #ffb0d0; font-family:'Press Start 2P','ZCOOL KuaiLe',cursive; margin-bottom:1rem; text-align:center;">🌸 关 于</h2>
+        <div class="about-content">
+          <div class="about-emoji-line">🌸 💖 ✨ 🎀 💿</div>
+          <p>🎤 这里是 <strong>幻瑃主唱小婪</strong> 的个人小花园！</p>
+          <p>💕 喜欢一切粉色的、闪亮的、复古又未来的东西。</p>
+          <p>🐍 祝我和蝰蛇99！也爱所有幻瑃乐迷们！！</p>
+          <p>📀 千禧年永远不死，极繁主义就是我的态度。</p>
+          <div class="about-emoji-line">✨ 🌸 🎧 💌 📸</div>
+          <p style="font-size:0.7rem; text-align:center; margin-top:1rem; opacity:0.6;">—— 2026 · 永远千禧 ——</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== 侧边装饰 ===== -->
+    <div class="sidebar-stickers">
+      <span>🌸 茹果愛you颜铯，Na①锭4蕾姆💙</span>
+      <span>✞昇天✞</span>
+      <span>可愛くてごめん</span>
+    </div>
+
+    <!-- ===== 留言板 ===== -->
+    <section class="guestbook-section" id="guestbook">
+      <h2>💬 留 言 板</h2>
+      <div class="guestbook-form">
+        <input type="text" id="guestName" placeholder="👤 你的名字 (可选)" maxlength="20" />
+        <textarea id="guestMessage" placeholder="✏️ 留下你想说的话……" maxlength="500"></textarea>
+        <button id="submitMessage">🌸 发 送 留 言</button>
+      </div>
+      <div class="guestbook-messages" id="messageList">
+        <div class="empty-msg">✨ 还没有留言，快来抢沙发吧～ ✨</div>
+      </div>
+    </section>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="blog-footer">
+      <!-- "芭比粉 · 复古极繁 · 千禧风" 已删除 -->
+      <div class="footer-tag">✨ ありがとう~ ✨</div>
+    </footer>
+  </div>
+
+  <!-- 额外装饰 -->
+  <div style="position: fixed; bottom: 10px; left: 10px; font-size: 2rem; opacity: 0.2; transform: rotate(-10deg); z-index:0;">💋</div>
+  <div style="position: fixed; bottom: 30px; right: 20px; font-size: 2.5rem; opacity: 0.2; transform: rotate(15deg); z-index:0;">🦋</div>
+  <div style="position: fixed; top: 50%; left: 2%; font-size: 2rem; opacity: 0.1; transform: rotate(-20deg); z-index:0;">🌸</div>
+  <div style="position: fixed; top: 30%; right: 2%; font-size: 3rem; opacity: 0.08; transform: rotate(25deg); z-index:0;">✨</div>
+
+  <script>
+    (function() {
+      // ============================================================
+      //  1. 导航切换
+      // ============================================================
+      const navBtns = document.querySelectorAll('.nav-btn');
+      const panels = {
+        home: document.getElementById('page-home'),
+        gallery: document.getElementById('page-gallery'),
+        diary: document.getElementById('page-diary'),
+        playlist: document.getElementById('page-playlist'),
+        about: document.getElementById('page-about')
+      };
+
+      navBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          navBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const page = this.dataset.page;
+          Object.keys(panels).forEach(key => {
+            panels[key].classList.toggle('active', key === page);
+          });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+
+      // ============================================================
+      //  2. 头像上传
+      // ============================================================
+      const avatarContainer = document.getElementById('avatarContainer');
+      const avatarInput = document.getElementById('avatarInput');
+      const avatarImage = document.getElementById('avatarImage');
+      const avatarPlaceholder = document.getElementById('avatarPlaceholder');
+
+      try {
+        const savedAvatar = localStorage.getItem('profile_avatar_data');
+        if (savedAvatar) {
+          avatarImage.src = savedAvatar;
+          avatarImage.style.display = 'block';
+          avatarPlaceholder.style.display = 'none';
+        }
+      } catch (e) {}
+
+      avatarContainer.addEventListener('click', () => avatarInput.click());
+      avatarInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          const dataUrl = ev.target.result;
+          avatarImage.src = dataUrl;
+          avatarImage.style.display = 'block';
+          avatarPlaceholder.style.display = 'none';
+          try { localStorage.setItem('profile_avatar_data', dataUrl); } catch (e) {}
+        };
+        reader.readAsDataURL(file);
+      });
+
+      // ============================================================
+      //  3. 留言板
+      // ============================================================
+      const MSG_KEY = 'y2k_guestbook_messages';
+      const messageListEl = document.getElementById('messageList');
+      const nameInput = document.getElementById('guestName');
+      const msgInput = document.getElementById('guestMessage');
+      const submitBtn = document.getElementById('submitMessage');
+
+      function getMessages() {
+        try { const data = localStorage.getItem(MSG_KEY); return data ? JSON.parse(data) : []; } catch { return []; }
+      }
+
+      function saveMessages(messages) { localStorage.setItem(MSG_KEY, JSON.stringify(messages)); }
+
+      function renderMessages() {
+        const messages = getMessages();
+        messageListEl.innerHTML = '';
+        if (messages.length === 0) {
+          messageListEl.innerHTML = '<div class="empty-msg">✨ 还没有留言，快来抢沙发吧～ ✨</div>';
+          return;
+        }
+        const sorted = [...messages].reverse();
+        sorted.forEach((msg, index) => {
+          const item = document.createElement('div');
+          item.className = 'message-item';
+          const userDiv = document.createElement('div');
+          userDiv.className = 'msg-user';
+          const nameSpan = document.createElement('span');
+          nameSpan.textContent = msg.name || '匿名小可爱';
+          const timeSpan = document.createElement('span');
+          timeSpan.textContent = msg.time || '刚刚';
+          userDiv.appendChild(nameSpan);
+          userDiv.appendChild(timeSpan);
+          const contentDiv = document.createElement('div');
+          contentDiv.className = 'msg-content';
+          contentDiv.textContent = msg.text || '(空内容)';
+          const deleteBtn = document.createElement('button');
+          deleteBtn.className = 'msg-delete';
+          deleteBtn.textContent = '✕';
+          const originalIndex = messages.length - 1 - index;
+          deleteBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (confirm('确定要删除这条留言吗？')) {
+              const msgs = getMessages();
+              msgs.splice(originalIndex, 1);
+              saveMessages(msgs);
+              renderMessages();
+            }
+          });
+          item.appendChild(userDiv);
+          item.appendChild(contentDiv);
+          item.appendChild(deleteBtn);
+          messageListEl.appendChild(item);
+        });
+      }
+
+      function addMessage(name, text) {
+        if (!text || text.trim() === '') { alert('💬 留言内容不能为空哦～'); return false; }
+        const messages = getMessages();
+        const now = new Date();
+        const timeStr = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' +
+          String(now.getDate()).padStart(2, '0') + ' ' + String(now.getHours()).padStart(2, '0') + ':' +
+          String(now.getMinutes()).padStart(2, '0');
+        messages.push({ name: name.trim() || '匿名小可爱', text: text.trim(), time: timeStr });
+        saveMessages(messages);
+        renderMessages();
+        return true;
+      }
+
+      function handleSubmit() {
+        const name = nameInput.value.trim();
+        const text = msgInput.value.trim();
+        if (addMessage(name, text)) {
+          msgInput.value = '';
+          nameInput.value = '';
+          document.getElementById('guestbook').scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      renderMessages();
+      submitBtn.addEventListener('click', handleSubmit);
+      msgInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault();
+          handleSubmit(); }
+      });
+      let submitting = false;
+      const origHandler = handleSubmit;
+      handleSubmit = function() { if (submitting) return;
+        submitting = true;
+        origHandler();
+        setTimeout(() => { submitting = false; }, 500); };
+      submitBtn.addEventListener('click', handleSubmit);
+
+      // ============================================================
+      //  4. 相册
+      // ============================================================
+      const GALLERY_KEY = 'y2k_gallery_images';
+      const galleryGrid = document.getElementById('galleryGrid');
+      const galleryInput = document.getElementById('galleryInput');
+      const clearGalleryBtn = document.getElementById('clearGalleryBtn');
+
+      function getGallery() {
+        try { const data = localStorage.getItem(GALLERY_KEY); return data ? JSON.parse(data) : []; } catch { return []; }
+      }
+
+      function saveGallery(images) { localStorage.setItem(GALLERY_KEY, JSON.stringify(images)); }
+
+      function renderGallery() {
+        const images = getGallery();
+        galleryGrid.innerHTML = '';
+        if (images.length === 0) {
+          galleryGrid.innerHTML = '<div class="gallery-empty">✨ 还没有照片，快来上传吧～ ✨</div>';
+          return;
+        }
+        images.forEach((src, idx) => {
+          const item = document.createElement('div');
+          item.className = 'gallery-item';
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = '相册图片';
+          item.appendChild(img);
+          item.addEventListener('click', function() {
+            if (confirm('删除这张图片吗？')) {
+              const imgs = getGallery();
+              imgs.splice(idx, 1);
+              saveGallery(imgs);
+              renderGallery();
+            }
+          });
+          galleryGrid.appendChild(item);
+        });
+      }
+
+      galleryInput.addEventListener('change', function(e) {
+        const files = e.target.files;
+        if (!files.length) return;
+        const imgs = getGallery();
+        let loaded = 0;
+        for (let f of files) {
+          const reader = new FileReader();
+          reader.onload = function(ev) {
+            imgs.push(ev.target.result);
+            loaded++;
+            if (loaded === files.length) {
+              saveGallery(imgs);
+              renderGallery();
+              galleryInput.value = '';
+            }
+          };
+          reader.readAsDataURL(f);
+        }
+      });
+
+      clearGalleryBtn.addEventListener('click', function() {
+        if (confirm('确定要清空所有照片吗？')) {
+          saveGallery([]);
+          renderGallery();
+        }
+      });
+
+      renderGallery();
+
+      // ============================================================
+      //  5. 歌单
+      // ============================================================
+      const PLAYLIST_KEY = 'y2k_playlist';
+      const playlistContainer = document.getElementById('playlistContainer');
+      const songNameInput = document.getElementById('songNameInput');
+      const songArtistInput = document.getElementById('songArtistInput');
+      const addSongBtn = document.getElementById('addSongBtn');
+
+      function getPlaylist() {
+        try { const data = localStorage.getItem(PLAYLIST_KEY); return data ? JSON.parse(data) : []; } catch { return []; }
+      }
+
+      function savePlaylist(songs) { localStorage.setItem(PLAYLIST_KEY, JSON.stringify(songs)); }
+
+      function renderPlaylist() {
+        const songs = getPlaylist();
+        playlistContainer.innerHTML = '';
+        if (songs.length === 0) {
+          playlistContainer.innerHTML = '<div class="playlist-empty">✨ 歌单还是空的，快来添加吧～ ✨</div>';
+          return;
+        }
+        songs.forEach((song, idx) => {
+          const item = document.createElement('div');
+          item.className = 'playlist-item';
+          const num = document.createElement('span');
+          num.className = 'song-num';
+          num.textContent = '#' + (idx + 1);
+          const name = document.createElement('span');
+          name.className = 'song-name';
+          name.textContent = song.name || '未知歌名';
+          const artist = document.createElement('span');
+          artist.className = 'song-artist';
+          artist.textContent = song.artist ? '— ' + song.artist : '';
+          const del = document.createElement('button');
+          del.className = 'song-delete';
+          del.textContent = '✕';
+          del.addEventListener('click', function() {
+            if (confirm('删除这首歌曲吗？')) {
+              const s = getPlaylist();
+              s.splice(idx, 1);
+              savePlaylist(s);
+              renderPlaylist();
+            }
+          });
+          item.appendChild(num);
+          item.appendChild(name);
+          item.appendChild(artist);
+          item.appendChild(del);
+          playlistContainer.appendChild(item);
+        });
+      }
+
+      addSongBtn.addEventListener('click', function() {
+        const name = songNameInput.value.trim();
+        const artist = songArtistInput.value.trim();
+        if (!name) { alert('🎵 歌名不能为空哦～'); return; }
+        const songs = getPlaylist();
+        songs.push({ name, artist });
+        savePlaylist(songs);
+        renderPlaylist();
+        songNameInput.value = '';
+        songArtistInput.value = '';
+      });
+
+      songNameInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') addSongBtn.click(); });
+      songArtistInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') addSongBtn.click(); });
+
+      renderPlaylist();
+
+      // ============================================================
+      //  6. 日记
+      // ============================================================
+      const DIARY_KEY = 'y2k_diary';
+      const diaryList = document.getElementById('diaryList');
+      const diaryTitleInput = document.getElementById('diaryTitleInput');
+      const diaryBodyInput = document.getElementById('diaryBodyInput');
+      const addDiaryBtn = document.getElementById('addDiaryBtn');
+
+      function getDiary() {
+        try { const data = localStorage.getItem(DIARY_KEY); return data ? JSON.parse(data) : []; } catch { return []; }
+      }
+
+      function saveDiary(entries) { localStorage.setItem(DIARY_KEY, JSON.stringify(entries)); }
+
+      function renderDiary() {
+        const entries = getDiary();
+        diaryList.innerHTML = '';
+        if (entries.length === 0) {
+          diaryList.innerHTML = '<div class="diary-empty">✨ 还没有日记，记录你的心情吧～ ✨</div>';
+          return;
+        }
+        const sorted = [...entries].reverse();
+        sorted.forEach((entry, index) => {
+          const item = document.createElement('div');
+          item.className = 'diary-item';
+          const header = document.createElement('div');
+          header.className = 'diary-header';
+          const title = document.createElement('span');
+          title.className = 'diary-title';
+          title.textContent = entry.title || '无标题';
+          const date = document.createElement('span');
+          date.className = 'diary-date';
+          date.textContent = entry.time || '刚刚';
+          const del = document.createElement('button');
+          del.className = 'diary-delete';
+          del.textContent = '✕';
+          const originalIndex = entries.length - 1 - index;
+          del.addEventListener('click', function() {
+            if (confirm('删除这篇日记吗？')) {
+              const e = getDiary();
+              e.splice(originalIndex, 1);
+              saveDiary(e);
+              renderDiary();
+            }
+          });
+          header.appendChild(title);
+          header.appendChild(date);
+          header.appendChild(del);
+          const body = document.createElement('div');
+          body.className = 'diary-body';
+          body.textContent = entry.body || '(空内容)';
+          item.appendChild(header);
+          item.appendChild(body);
+          diaryList.appendChild(item);
+        });
+      }
+
+      addDiaryBtn.addEventListener('click', function() {
+        const title = diaryTitleInput.value.trim();
+        const body = diaryBodyInput.value.trim();
+        if (!body) { alert('💌 日记内容不能为空～'); return; }
+        const entries = getDiary();
+        const now = new Date();
+        const timeStr = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' +
+          String(now.getDate()).padStart(2, '0') + ' ' + String(now.getHours()).padStart(2, '0') + ':' +
+          String(now.getMinutes()).padStart(2, '0');
+        entries.push({ title: title || '无标题', body: body, time: timeStr });
+        saveDiary(entries);
+        renderDiary();
+        diaryTitleInput.value = '';
+        diaryBodyInput.value = '';
+      });
+
+      renderDiary();
+
+      console.log('🌸 博客已加载！所有数据保存在 localStorage 中。');
+    })();
+  </script>
+</body>
+</html>
